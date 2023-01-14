@@ -9,6 +9,7 @@ If you have any suggestions for it, please contact me on the KI Discord. I'd be 
 ### Prerequisites
 1. You need Python 3.8 or newer. This can be installed here: https://www.python.org/downloads/
 2. Download the code of the repository and save it anywhere you like. Remember the file path.
+3. Extract the folder if you downloaded it as a .zip file.
 
 ### How to Run
 1. Open your terminal on your computer. Powershell works or just the cmd prompt.
