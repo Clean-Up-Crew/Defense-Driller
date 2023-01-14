@@ -6,11 +6,11 @@ The project is in its infancy right now, but it's working as intended for right 
 If you have any suggestions for it, please contact me on the KI Discord. I'd be happy to hear them!
 
 ## Installation
-# Prerequisites
+### Prerequisites
 1. You need Python 3.8 or newer. This can be installed here: https://www.python.org/downloads/
 2. Download the code of the repository and save it anywhere you like. Remember the file path.
 
-## How to Run
+### How to Run
 1. Open your terminal on your computer. Powershell works or just the cmd prompt.
 2. Change the directory to where you saved the defense-driller.py file. This can be accomplished with `cd Your-Directory`
    (Replace `Your-Directory` with the location you put the file)
