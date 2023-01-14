@@ -8,8 +8,10 @@ If you have any suggestions for it, please contact me on the KI Discord. I'd be 
 ## Installation
 ### Prerequisites
 1. You need Python 3.8 or newer. This can be installed here: https://www.python.org/downloads/
-2. Download the code of the repository and save it anywhere you like. Remember the file path.
-3. Extract the folder if you downloaded it as a .zip file.
+2. Install pip on your computer as well.
+3. Then, type this into your command prompt `pip install vgamepad`
+4. Download the code of the repository and save it anywhere you like. Remember the file path.
+5. Extract the folder if you downloaded it as a .zip file.
 
 ### How to Run
 1. Open your terminal on your computer. Powershell works or just the cmd prompt.
