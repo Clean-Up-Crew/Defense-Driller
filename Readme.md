@@ -23,3 +23,9 @@ If you have any suggestions for it, please contact me on the KI Discord. I'd be 
 6. Select your character and the character you are training against.
 7. Set the dummy to "Human".
 8. Enjoy practicing your defense!
+
+## Current Issues/ Todo List
+1. Turn into a python executable so you don't need to install anything
+2. Omen IAD j.hp, j.lk (cross up defense)
+3. Tusk/Wulf/Eyedol alternating st.lk/throw (strike throw defense)
+4. Thunder Horn Breaker xx Triplax/Command Grab/Ankle Slicer (OS defense)
