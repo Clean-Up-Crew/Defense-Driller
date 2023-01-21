@@ -57,9 +57,8 @@ gamepad = vg.VX360Gamepad()
 
 response = 0
 while response == 0:
-    print("Type 1 for Shadow Jago, 2 for all the characters with B+HP overheads.")
     try:
-        response = int(input())
+        response = int(input("Type 1 for Shadow Jago, 2 for all the characters with B+HP overheads."))
     except:
         print("Try again.")
 

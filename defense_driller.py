@@ -52,13 +52,42 @@ def shoto(rand_num):
         gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_DOWN)
         gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
         gamepad.update()
+        
+def wulf(rand_num):
+    '''Alternate between Sabrewulf's low and overhead run attacks.'''
+    gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_RIGHT)
+    gamepad.update()
+    time.sleep(0.1)
+    gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_RIGHT)
+    gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT)
+    gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
+    gamepad.update()
+    time.sleep(0.25)
+    gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT)
+    gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
+    gamepad.update()
+    time.sleep(0.1)
+
+    if rand_num == 1:
+        gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
+        gamepad.update()
+        time.sleep(0.25)
+        gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
+        gamepad.update()
+    else:
+        gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
+        gamepad.update()
+        time.sleep(0.25)
+        gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
+        gamepad.update()
+
 
 gamepad = vg.VX360Gamepad()
 
 response = 0
 while response == 0:
     try:
-        response = int(input("Type 1 for Shadow Jago, 2 for all the characters with B+HP overheads."))
+        response = int(input("Type 1 for Shadow Jago, 2 for Sabrewulf, 3 for all the characters with B+HP overheads.\n"))
     except:
         print("Try again.")
 
@@ -76,5 +105,7 @@ while(True):
     rand_num = random.randint(1, 3)
     if response == 1:
         shago(rand_num)
+    elif response == 2:
+        wulf(rand_num)
     else:
         shoto(rand_num)
