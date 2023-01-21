@@ -62,7 +62,7 @@ def wulf(rand_num):
     gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT)
     gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
     gamepad.update()
-    time.sleep(0.25)
+    time.sleep(0.05)
     gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT)
     gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
     gamepad.update()
@@ -81,13 +81,50 @@ def wulf(rand_num):
         gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_A)
         gamepad.update()
 
+def kan_ra(rand_num):
+    '''
+    Checks the ability to react to the command grab on block.
+    Alternates between strikes and throws.
+    '''
+    gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT)
+    gamepad.update()
+    time.sleep(0.5)
+    gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_LEFT)
+    gamepad.update()
+    gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_DOWN)
+    gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
+    gamepad.update()
+    time.sleep(0.25)
+    gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_DOWN)
+    gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_B)
+    gamepad.update()
+
+    if rand_num == 1:
+        gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_DOWN)
+        gamepad.update()
+        time.sleep(0.05)
+        gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_RIGHT)
+        gamepad.update()
+        time.sleep(0.05)
+        gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_DOWN)
+        gamepad.press_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_X)
+        gamepad.update()
+        time.sleep(0.25)
+        gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_DPAD_RIGHT)
+        gamepad.release_button(button=vg.XUSB_BUTTON.XUSB_GAMEPAD_X)
+        gamepad.update()
+
 
 gamepad = vg.VX360Gamepad()
 
 response = 0
 while response == 0:
     try:
-        response = int(input("Type 1 for Shadow Jago, 2 for Sabrewulf, 3 for all the characters with B+HP overheads.\n"))
+        response = int(input("""What would you like to practice?
+        1. Shadow Jago D+MK and B+HK
+        2. Sabrewulf overhead/low run attacks
+        3. Kan-Ra tick throws
+        4. High/low against characters with B+HP overheads.\n"""))
     except:
         print("Try again.")
 
@@ -107,5 +144,7 @@ while(True):
         shago(rand_num)
     elif response == 2:
         wulf(rand_num)
+    elif response == 3:
+        kan_ra(rand_num)
     else:
         shoto(rand_num)
